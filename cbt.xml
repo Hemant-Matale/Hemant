@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Suite123" parallel="tests" thread-count="3">
+
+	<test name="Chrome Test">
+		<parameter name="browsername" value="chrome" />
+		<classes>
+			<class name="testDemo.BusesDemo" />
+			<class name="testDemo.FooterLinksDemo" />
+		</classes>
+	</test>
+
+	<test name="Firefox Test">
+		<parameter name="browsername" value="firefox" />
+		<classes>
+			<class name="testDemo.BusesDemo" />
+			<class name="testDemo.FooterLinksDemo" />
+		</classes>
+	</test>
+
+	<test name="Edge Test">
+		<parameter name="browsername" value="edge" />
+		<classes>
+			<class name="testDemo.BusesDemo" />
+			<class name="testDemo.FooterLinksDemo" />
+		</classes>
+	</test>
+</suite>

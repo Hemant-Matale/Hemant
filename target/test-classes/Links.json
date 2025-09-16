@@ -1,0 +1,17 @@
+[
+  {
+    "linkText": "Privacy",
+    "expectedUrl": "https://www.goibibo.com/info/privacy/",
+    "expectedTitle": "Privacy Policy"
+  },
+  {
+      "linkText": "PNR Status",
+      "expectedUrl": "https://www.goibibo.com/trains/check-pnr-status/",
+      "expectedTitle": "PNR Status"
+    },
+  {
+    "linkText": "About Us",
+    "expectedUrl": "https://www.goibibo.com/aboutus/",
+    "expectedTitle": "About Goibibo"
+  }
+]

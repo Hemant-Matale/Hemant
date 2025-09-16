@@ -1,0 +1,12 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="browsername" value="Firefox"/>
+  <test name="Test">
+    <classes>
+      <class name="setup.Setup"/>
+      <class name="TestDemo.BusesDemo"/>
+      <class name="TestDemo.FooterLinksDemo"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
