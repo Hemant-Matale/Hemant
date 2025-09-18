@@ -28,8 +28,8 @@ Feature: Bus search functionality on Goibibo
     Examples:
     | source    | destination | date              |
     | Mumbai    | Pune        | September 30 2025 |
-    #| Delhi     | Jaipur      | December 20 2025  |
-    #| Bangalore | Hyderabad   | November 12 2025  |
+    | Delhi     | Jaipur      | December 20 2025  |
+    | Bangalore | Hyderabad   | November 12 2025  |
     
     Scenario Outline: Verify that search with same source and destination Error Validation Message displays
     Given the user is on the Goibibo Bus booking page
@@ -40,8 +40,8 @@ Feature: Bus search functionality on Goibibo
     Examples:
     | city        | date               |
     | Mumbai      | September 30 2025 |
-    #| Delhi       | December 20 2025  |
-    #| Bangalore   | November 12 2025  |
+    | Delhi       | December 20 2025  |
+    | Bangalore   | November 12 2025  |
     
     Scenario Outline: Verify that search with only source entered and destination kept Blank Error Validation Message displays
     Given the user is on the Goibibo Bus booking page
@@ -52,8 +52,8 @@ Feature: Bus search functionality on Goibibo
     Examples:
     | source    |  date              |
     | Mumbai    |  September 30 2025 |
-    #| Delhi     |  December 20 2025  |
-    #| Bangalore |  November 12 2025  |
+    | Delhi     |  December 20 2025  |
+    | Bangalore |  November 12 2025  |
     
     Scenario Outline: Verify that search with source kept blank and only destination entered Error Validation Message displays
     Given the user is on the Goibibo Bus booking page
