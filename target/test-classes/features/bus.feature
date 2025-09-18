@@ -19,12 +19,52 @@
 
 Feature: Bus search functionality on Goibibo
 
-  Scenario: Verify that valid bus routes return available buses
+  Scenario Outline: Verify that valid bus routes return available buses
     Given the user is on the Goibibo Bus booking page
-    When the user enters a valid source and destination
-    And selects a travel date
+    When the user enters "<source>" as source and "<destination>" as destination
+    And selects "<date>" as travel date
     And clicks on the search button
     Then the search results page should display available buses with the correct count
-
+    Examples:
+    | source    | destination | date              |
+    | Mumbai    | Pune        | September 30 2025 |
+    #| Delhi     | Jaipur      | December 20 2025  |
+    #| Bangalore | Hyderabad   | November 12 2025  |
+    
+    Scenario Outline: Verify that search with same source and destination Error Validation Message displays
+    Given the user is on the Goibibo Bus booking page
+    When the user enters "<city>" source and destination
+    And selects "<date>" as travel date
+    And clicks on the search button
+    Then Validation Message should be displayed saying "Source and Destination cannot be the same"
+    Examples:
+    | city        | date               |
+    | Mumbai      | September 30 2025 |
+    #| Delhi       | December 20 2025  |
+    #| Bangalore   | November 12 2025  |
+    
+    Scenario Outline: Verify that search with only source entered and destination kept Blank Error Validation Message displays
+    Given the user is on the Goibibo Bus booking page
+    When the user enters "<source>" as source and destination kept blank
+    And selects "<date>" as travel date
+    And clicks on the search button
+    Then Validation Message should be displayed saying "Please enter the TO location"
+    Examples:
+    | source    |  date              |
+    | Mumbai    |  September 30 2025 |
+    #| Delhi     |  December 20 2025  |
+    #| Bangalore |  November 12 2025  |
+    
+    Scenario Outline: Verify that search with source kept blank and only destination entered Error Validation Message displays
+    Given the user is on the Goibibo Bus booking page
+    When the user keeps source blank and only enters "<destination>" as destination
+    And selects "<date>" as travel date
+    And clicks on the search button
+    Then Validation Message should be displayed saying "Please enter the FROM location"
+    Examples:
+       | destination | date              |
+       | Mumbai      | September 30 2025 |
+       #| Delhi       | December 20 2025  |
+       #| Pune        | November 12 2025  |
 
 

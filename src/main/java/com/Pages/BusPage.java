@@ -9,7 +9,7 @@ import setup.Keywords;
 
 /**
  * Bus Page of Goibibo Application Application URL:
- * https://www.goibibo.com/buses/
+ * https://www.goibibo.com/bus/
  */
 
 public class BusPage {
@@ -35,6 +35,7 @@ public class BusPage {
 
 	@FindBy(css = ".biXizc .error")
 	private WebElement sameSrcAndDestErrValidationTextField;
+	
 
 	public void enterSourceToFromInputField(String source) {
 		fromInputField.sendKeys(source);
