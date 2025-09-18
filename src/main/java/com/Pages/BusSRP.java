@@ -8,7 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.Driver.DriverFactory;
 import com.Utils.WaitFor;
 
-
+/**
+ * Bus Search Page of Goibibo Application Application URL:
+ * https://www.goibibo.com/bus/search
+ */
 
 public class BusSRP {
 
